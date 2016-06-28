@@ -1,0 +1,5 @@
+Linux:
+
+g++ -c MathFuncs.cpp
+g++ -shared -o MathFuncsDll.dll MathFuncsDll.o
+g++ MyDll.cpp MathFuncsDll.dll -I. -Wl,-rpath,. -L. -o laba2.exe
